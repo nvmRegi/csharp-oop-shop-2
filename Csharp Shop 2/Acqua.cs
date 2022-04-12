@@ -11,6 +11,7 @@ namespace Csharp_Shop_2
         public double litri; //litri presenti nella bottiglia
         private double ph; //livello di acidità dell'acqua
         private string sorgente; //provenienza dell'acqua
+        public const double MAX_LITRI = 1.5;
 
         //COSTRUTTORE senza iva e senza prezzo
         public Acqua(string nome, string descrizione, double litri, double ph, string sorgente) : base(nome, descrizione)
@@ -63,13 +64,13 @@ namespace Csharp_Shop_2
             if (litri == 0)
             {
                 Console.WriteLine("Errore nel riempimento!");
-            } else if (this.litri + litri < 1.5)
+            } else if (this.litri + litri < MAX_LITRI)
             {
                 this.litri += litri;
                 Console.WriteLine("Stai riempiendo la bottiglia!");
-            } else if (this.litri + litri > 1.5)
+            } else if (this.litri + litri > MAX_LITRI)
             {
-                this.litri = 1.5;
+                this.litri = MAX_LITRI;
                 Console.WriteLine("Hai riempito troppo la bottiglia!");
             }
         }
