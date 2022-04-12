@@ -90,10 +90,13 @@ namespace Csharp_Shop_2
 
         public override void stampaProdotto()
         {
-            base.stampaProdotto();
+            base.stampaNomeEsteso();
+            Console.WriteLine("Descrizione: " + base.descrizione);
             Console.WriteLine("Sorgente: " + this.sorgente);
             Console.WriteLine("PH: " + this.ph);
             Console.WriteLine("Litri: " + this.litri);
+            base.stampaPrezzoBase();
+            base.calcoloIva();
         }
 
         //METODO STATICO

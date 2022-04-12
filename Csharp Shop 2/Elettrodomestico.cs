@@ -10,6 +10,7 @@ namespace Csharp_Shop_2
     {
         private string tipoElettrodomestico;
         private string classeEnergetica;
+        private bool interruttore = false;
         
         public Elettrodomestico(string nome, string descrizione, string tipoElettrodomestico, string classeEnergetica) : base(nome, descrizione)
         {
@@ -21,6 +22,18 @@ namespace Csharp_Shop_2
         {
             this.tipoElettrodomestico = tipoElettrodomestico;
             this.classeEnergetica = classeEnergetica;
+        }
+
+        public void acceso()
+        {
+            interruttore = true;
+            Console.WriteLine("Hai accesso " + base.nome + "!");
+        }
+
+        public void spento()
+        {
+            interruttore = false;
+            Console.WriteLine("Hai spento " + base.nome + "!");
         }
     }
 }
