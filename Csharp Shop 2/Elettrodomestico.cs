@@ -35,5 +35,10 @@ namespace Csharp_Shop_2
             interruttore = false;
             Console.WriteLine("Hai spento " + base.nome + "!");
         }
+
+        public override void stampaProdotto()
+        {
+            base.stampaProdotto();
+        }
     }
 }

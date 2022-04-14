@@ -11,3 +11,12 @@ acqua.riempi(0.6);
 Console.WriteLine(acqua.litri);
 acqua.svuota();
 Console.WriteLine(acqua.litri);
+
+try
+{
+    acqua.bevi(1);
+} catch (Exception e) {
+    Console.WriteLine("MESSAGGIO DI ERRORE: " + e.Message);    
+}
+
+

@@ -50,7 +50,7 @@ namespace Csharp_Shop_2
             }
             else if(this.litri == 0)
             {
-                Console.WriteLine("Non c'è abbastanza acqua!");
+                throw new ArgumentOutOfRangeException("litri","LA BOTTIGLIA è VUOTA");
             }
             else
             {
